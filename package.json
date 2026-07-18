@@ -1,0 +1,19 @@
+{
+  "name": "job-portal-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {}
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}

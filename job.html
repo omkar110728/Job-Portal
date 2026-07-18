@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+
+    <!-- Google Fonts: Syne (headings) + DM Sans (body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./job.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="logo" href="#">work<span>ly</span></a>
+        <nav>
+            <a href="#">Find jobs</a>
+            <a href="#">Companies</a>
+            <a href="#">Salaries</a>
+            <button class="btn-post">Post a job</button>
+        </nav>
+    </header>
+
+    <!-- ── HERO + SEARCH ── -->
+    <section class="hero">
+        <h1>Find your next <span>great role</span> </h1>
+        <p>Browse 2,400+ jobs from top companies worldwide</p>
+        <div class="search-bar">
+            <input type="text" name="" id="searchInput" placeholder="Job title, skill, or company..">
+            <button type="button">Search</button>
+        </div>
+    </section>
+
+    <!-- filter buttons -->
+     <div class="filter-bar">
+        <span class="filter-label">Type:</span>
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Full-time</button>
+        <button class="filter-btn">Part-time</button>
+        <button class="filter-btn">Contract</button>
+        <button class="filter-btn">Remote</button>
+     </div>
+
+<!-- ── MAIN CONTENT ── -->
+     <main>
+        
+    <!-- Sidebar filters -->
+        <aside>
+            <div class="sidebar-section">
+                <h3>EXPERIENCE</h3>
+                <label><input type="checkbox" data-filter="experience" data-value="Entry level" />Entry level</label>
+                <label><input type="checkbox" data-filter="experience" data-value="Mid level" />Mid level (1–3 yrs)</label>
+                <label><input type="checkbox" data-filter="experience" data-value="Senior" />Senior (4+ yrs)</label>
+                <label><input type="checkbox" data-filter="experience" data-value="Lead" />Lead / Manager</label>
+            </div>
+            <div class="sidebar-section">
+                <h3>LOCATION</h3>
+                <label><input type="checkbox" data-filter="location" data-value="Remote" />Remote</label>
+                <label><input type="checkbox" data-filter="location" data-value="Mumbai" />Mumbai</label>
+                <label><input type="checkbox" data-filter="location" data-value="Bangalore" />Bangalore</label>
+                <label><input type="checkbox" data-filter="location" data-value="Pune" />Pune</label>
+                <label><input type="checkbox" data-filter="location" data-value="Hyderabad" />Hyderabad</label>
+            </div>
+            <div class="sidebar-section">
+                <h3>SKILLS</h3>
+                <label><input type="checkbox" data-filter = "skills" data-value= "HTML5" />HTML / CSS</label>
+                <label><input type="checkbox" data-filter = "skills" data-value= "JavaScript" />JavaScript</label>
+                <label><input type="checkbox" data-filter = "skills" data-value= "React" />React</label>
+                <label><input type="checkbox" data-filter = "skills" data-value= "jQuery" />jQuery</label>
+                <label><input type="checkbox" data-filter = "skills" data-value= "CMS" />CMS</label>
+            </div>
+        </aside>
+
+        <section class="jobs-section">
+            <div class="jobs-header">
+                <h2>Latest Openings</h2>
+                <span class="jobs-count">Showing 6 of 2,400 jobs</span>
+            </div>
+
+            <div class="jobs-grid" id="jobsgrid">
+                <!-- card 1 -->
+                 <!-- <article class="job-card">
+                    <div class="card-top">
+                        <div class="company-logo">AC</div>
+                        <button class="save-btn">Save</button>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="job-title">Frontend Developer</h3>
+                        <p class="company-name">Accenture · Mumbai</p>
+                        <div class="tags">
+                            <span class="tag accent">Full-time</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">CMS</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="salary">₹6–9 LPA</span>
+                        <span class="posted-date">2 days ago</span>
+                    </div>
+                 </article> -->
+
+                 <!-- above is basice structure of the card html and all card data will recive from api -->
+            </div>
+            <div class="pagination" id="pagination">
+                <button class="page-btn" id="prevBtn">prev</button>
+                <button class="page-numbers" id="pageNumbers"></button>
+                <button class="page-btn" id="nextBtn">Next</button>
+            </div>
+        </section>
+     </main>
+     <!-- <script src="script.js"></script> -->
+     <!-- <script src="render.js"></script>
+     <script src="pagination.js"></script> -->
+     <script type="module" src="main.js"></script>
+</body>
+</html>
